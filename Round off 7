@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+#include <string.h>
+
+#include <math.h>
+
+#include <stdlib.h>
+
+int main() {
+
+/* Enter your code here. Read input from STDIN. Print output to STDOUT */
+
+float a;
+
+scanf("%f",&a);
+
+printf("%d", (int)a);
+
+printf("\n%.1f",ceil(a));
+
+printf("\n%.1f", floor(a));
+
+return 0;
+}
