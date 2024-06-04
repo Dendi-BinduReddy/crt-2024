@@ -1,0 +1,7 @@
+#include<stdio.h>
+intmain()
+{
+char a;
+scanf("%c",&a);
+printf("%d",a);
+}
