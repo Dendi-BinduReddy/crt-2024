@@ -1,0 +1,108 @@
+Mr.Kumar went to purchase stationary items for his office. He asked the shopkeeper for a discount. The shopkeeper said that if he purchases more than 200 quantity of the item, then a discount of 20% can be applied on the total bill amount, excluding the GST. Get the Quantity and price per item as an input and calculate and tell whether Mr.Kumar is eligible for the discount and what would be the net amount he has to pay after the discount. Take the GST at 18%. Net Amount = Total bill amount after discount + GST
+
+Input Format
+
+Enter quantity Enter price per unit
+
+Constraints
+
+1<=n<=10^7
+
+Output Format
+
+Print the output
+
+Sample Input 0
+
+100
+5
+Sample Output 0
+
+Quantity Ordered 100
+Price per item is Rs.5
+Total Amount = Rs.500
+GST - Rs.90.0
+Net Amount Payable is Rs.590.0
+Sample Input 1
+
+350
+20
+Sample Output 1
+
+Quantity Ordered 350
+Price per item is Rs.20
+Total Amount = Rs.7000
+Discount Earned = Rs.1400.0
+Amount after Discount - Rs.5600.0
+GST - Rs.1008.0
+Net Amount Payable is Rs.6608.0
+Submissions: 101
+Max Score: 20
+Difficulty: Medium
+Rate This Challenge:
+
+    
+More
+ 
+1
+#include <stdio.h>
+2
+#include <string.h>
+3
+#include <math.h>
+4
+#include <stdlib.h>
+5
+​
+6
+int main() {
+7
+​
+8
+    int n,pri;
+9
+    float amt;
+10
+    scanf("%d%d",&n,&pri);
+11
+    int tp=n*pri;
+12
+    printf("Quantity Ordered %d",n);
+13
+    printf("\nPrice per item is Rs.%d",pri);
+14
+    if(n>200){
+15
+        amt=tp;
+16
+        printf("\nTotal Amount = Rs.%.0f",amt);
+17
+        printf("\nDiscount Earned = Rs.%.1f",amt*0.2);
+18
+        amt=tp-(tp*0.2);
+19
+        printf("\nAmount after Discount - Rs.%.1f",amt);
+20
+    }
+21
+    else
+22
+    {
+23
+        amt=tp;
+24
+        printf("\nTotal Amount = Rs.%.0f",amt);
+25
+    }
+26
+    float gst=(float)(amt*0.18);
+27
+    float totamt=(float)amt+gst;
+28
+    printf("\nGST - Rs.%.1f",gst);
+29
+    printf("\nNet Amount Payable is Rs.%.1f",totamt);  
+30
+    return 0;
+31
+}
